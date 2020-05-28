@@ -1,0 +1,37 @@
+{
+  "name": "demvsystems/transaction-logging",
+  "description": "Logging",
+  "homepage": "https://github.com/demvsystems/transaction-logging",
+  "authors": [
+    {
+      "name": "Developer",
+      "email": "developer@demv.de"
+    },
+    {
+      "name": "Christian Haberland",
+      "email": "c.haberland@demv.de"
+    }
+  ],
+  "require": {
+    "monolog/monolog": "^1.25",
+    "psr/http-server-middleware": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "zendframework/zend-diactoros": "^2.1",
+    "roave/security-advisories": "dev-master"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bipro\\Logging\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Bipro\\Logging\\": "tests/"
+    }
+  }
+}
