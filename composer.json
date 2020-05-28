@@ -1,7 +1,7 @@
 {
-  "name": "demvsystems/transaction-logging",
+  "name": "demvsystems/bipro-transaction-logging",
   "description": "Logging",
-  "homepage": "https://github.com/demvsystems/transaction-logging",
+  "homepage": "https://github.com/demvsystems/bipro-transaction-logging",
   "authors": [
     {
       "name": "Developer",
