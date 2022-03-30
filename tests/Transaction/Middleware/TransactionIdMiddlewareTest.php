@@ -9,11 +9,12 @@ use Bipro\Logging\Transaction\Processor\TransactionIdProcessor;
 use Monolog\Logger;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
 
 /**
  * Class TransactionIdMiddlewareTest
@@ -21,6 +22,8 @@ use Zend\Diactoros\ServerRequest;
  */
 final class TransactionIdMiddlewareTest extends TestCase
 {
+    use ProphecyTrait;
+
     /**
      * @throws Throwable
      */
