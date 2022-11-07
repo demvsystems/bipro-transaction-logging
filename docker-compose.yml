@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  php-fpm:
+    container_name: bipro-transaction-logging
+    build:
+      context: ./.docker/php
+      args:
+        WITH_XDEBUG: $WITH_XDEBUG
+        GITHUB_TOKEN: $GITHUB_TOKEN
+        USER_ID: $USER_ID
+    env_file: .env
+    volumes:
+      - .:/var/www/html:delegated

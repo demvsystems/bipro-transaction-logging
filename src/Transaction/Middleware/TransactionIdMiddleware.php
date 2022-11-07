@@ -19,11 +19,7 @@ use Throwable;
 final class TransactionIdMiddleware implements MiddlewareInterface
 {
     private const HEADER = 'X-DEMV-Transaction-Id';
-
-    /**
-     * @var Logger
-     */
-    private $logger;
+    private Logger $logger;
 
     public function __construct(Logger $logger)
     {

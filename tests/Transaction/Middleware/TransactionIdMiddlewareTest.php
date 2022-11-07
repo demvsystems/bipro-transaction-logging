@@ -6,14 +6,15 @@ namespace Tests\Bipro\Logging\Transaction\Middleware;
 
 use Bipro\Logging\Transaction\Middleware\TransactionIdMiddleware;
 use Bipro\Logging\Transaction\Processor\TransactionIdProcessor;
+use Laminas\Diactoros\Response;
+use Laminas\Diactoros\ServerRequest;
 use Monolog\Logger;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Throwable;
-use Zend\Diactoros\Response;
-use Zend\Diactoros\ServerRequest;
 
 /**
  * Class TransactionIdMiddlewareTest
@@ -21,6 +22,8 @@ use Zend\Diactoros\ServerRequest;
  */
 final class TransactionIdMiddlewareTest extends TestCase
 {
+    use ProphecyTrait;
+
     /**
      * @throws Throwable
      */
