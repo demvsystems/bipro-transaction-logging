@@ -23,7 +23,7 @@
     "phpspec/prophecy-phpunit": "^2.0"
   },
   "scripts": {
-    "test": "phpunit"
+    "test": "phpunit --do-not-cache-result"
   },
   "autoload": {
     "psr-4": {
