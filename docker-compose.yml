@@ -12,3 +12,5 @@ services:
     env_file: .env
     volumes:
       - .:/var/www/html:delegated
+      - ./.docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./.docker/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
