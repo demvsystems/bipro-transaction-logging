@@ -12,10 +12,7 @@ use Monolog\Processor\ProcessorInterface;
  */
 final class TransactionIdProcessor implements ProcessorInterface
 {
-    /**
-     * @var string
-     */
-    private $transactionId;
+    private string $transactionId;
 
     /**
      * TransactionIdProcessor constructor.
