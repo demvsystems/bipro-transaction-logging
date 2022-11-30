@@ -5,7 +5,6 @@ DOCKER_PHP_SERVICE = php-fpm
 docker-new: docker-kill
 	docker-compose up -d --build --remove-orphans
 	make docker-composer-install
-	make docker-composer-update
 
 docker-composer-install:
 	docker-compose exec $(DOCKER_PHP_SERVICE) composer install --optimize-autoloader
