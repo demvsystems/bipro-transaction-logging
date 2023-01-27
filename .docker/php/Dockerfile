@@ -1,5 +1,7 @@
+ARG PHP_VERSION
+
 FROM composer
-FROM php:8.1-fpm-alpine
+FROM php:${PHP_VERSION}-fpm-alpine
 
 ARG USER_ID=1000
 ARG WITH_XDEBUG=false
