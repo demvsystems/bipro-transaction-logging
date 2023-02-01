@@ -12,6 +12,9 @@ docker-composer-install:
 docker-composer-update:
 	docker-compose exec $(DOCKER_PHP_SERVICE) composer update --lock
 
+docker-test:
+	docker-compose exec $(DOCKER_PHP_SERVICE) composer test
+
 docker-up:
 	docker-compose up -d
 
