@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Bipro\Logging\Transaction\Processor;
 
+use Monolog\LogRecord;
 use Monolog\Processor\ProcessorInterface;
 
 /**
@@ -25,13 +26,13 @@ final class TransactionIdProcessor implements ProcessorInterface
     }
 
     /**
-     * @param array $record
+     * @param LogRecord $record
      *
-     * @return array The processed records
+     * @return LogRecord The processed record
      */
-    public function __invoke(array $record): array
+    public function __invoke(LogRecord $record): LogRecord
     {
-        $record['extra']['transaction_id'] = $this->transactionId;
+        $record->extra['transaction_id'] = $this->transactionId;
 
         return $record;
     }
