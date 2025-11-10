@@ -1,13 +1,13 @@
 ARG PHP_VERSION
 
-FROM composer
+FROM composer@sha256:5248900ab8b5f7f880c2d62180e40960cd87f60149ec9a1abfd62ac72a02577c
 FROM php:${PHP_VERSION}-fpm-alpine
 
 ARG USER_ID=1000
 ARG WITH_XDEBUG=false
 ARG GITHUB_TOKEN
 
-COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer@sha256:5248900ab8b5f7f880c2d62180e40960cd87f60149ec9a1abfd62ac72a02577c /usr/bin/composer /usr/local/bin/composer
 
 RUN apk update && \
     apk add --no-cache ca-certificates git shadow bash && \
