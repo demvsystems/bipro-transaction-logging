@@ -6,7 +6,6 @@ services:
     build:
       context: ./.docker/php
       args:
-        WITH_XDEBUG: $WITH_XDEBUG
         GITHUB_TOKEN: $GITHUB_TOKEN
         USER_ID: $USER_ID
         PHP_VERSION: $PHP_VERSION
