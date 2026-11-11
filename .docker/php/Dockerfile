@@ -3,7 +3,7 @@ FROM php:8.3.32-fpm-alpine@sha256:9fcec48321d890240d700ccdc2b475420c87d398826e68
 ARG USER_ID=1000
 ARG GITHUB_TOKEN
 
-COPY --from=composer:2.8.12@sha256:5248900ab8b5f7f880c2d62180e40960cd87f60149ec9a1abfd62ac72a02577c /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:2.11.2@sha256:5bcb28b8d0edc4091125f8218f9d088f998bdfc843f8fbb9a4beb4dcd8625684 /usr/bin/composer /usr/local/bin/composer
 
 RUN apk update && \
     apk add --no-cache ca-certificates git shadow bash && \
